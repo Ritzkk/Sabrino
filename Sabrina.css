@@ -1,0 +1,1061 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #17140c;
+  background: #fffbef;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 56px;
+  background: #fffbef;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1.2;
+}
+
+.logo span {
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+}
+
+.nav a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.switch {
+  display: flex;
+  padding: 3px;
+  border: 1px solid #e0b52a;
+  border-radius: 999px;
+}
+
+.switch a {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.switch .ativo {
+  background: #f7d54a;
+  font-weight: 600;
+}
+
+.principal {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+  align-items: center;
+  gap: 40px;
+  padding: 40px 56px;
+  background: linear-gradient(135deg, #ffeb9c 0%, #fffbef 60%);
+}
+
+.principal_texto {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+#h1 {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.roles {
+  margin: 22px 0 18px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 380px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.botoes {
+  margin-top: 20px;
+  display: flex;
+  gap: 14px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.btn_cheio, .btn_borda {
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn_cheio {
+  background-color: #f7d54a;
+  color: #17140c;
+}
+
+.btn_borda {
+  border: 1px solid #e0b52a;
+  color: #17140c;
+}
+
+#principal_foto {
+  justify-self: center;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+  border: 4px solid #f7d54a;
+  box-shadow: 0 20px 50px rgba(224, 181, 42, 0.35);
+}
+
+
+.obs {
+  color: #e0b52a;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-size: 11px;
+}
+
+.h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+/* Biooooooo */
+.bio {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  gap: 40px;
+  padding: 5% 10% 5% 10%;
+  background: linear-gradient(135deg, #fffbef 0%, #ffeb9c 60%);;
+}
+
+.bio .bio_texto {
+  align-self: start;
+}
+
+
+.bio .bio_texto .obs {
+  color: #e0b52a;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-size: 11px;
+}
+
+.bio .bio_texto .h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bio .bio_texto #bio {
+
+  padding-bottom: 15px;
+
+}
+
+.bio .bio_texto #btn_bio {
+align-self: center;
+display: block;
+margin: 20px auto 0 auto;
+}
+
+.curiosidades_bio {
+    margin-top: 22px;
+    padding: 22px 25px;
+    background-color: #29251e;
+    border-left: 3px solid #e5c477;
+    border-radius: 8px;
+    color: #e8e0d2;
+    font-family: 'Poppins', sans-serif;
+    animation: aparecerBio 0.3s ease;
+}
+
+.curiosidades_bio[hidden] {
+    display: none;
+}
+
+.curiosidades_bio h3 {
+    color: #e5c477;
+    font-size: 17px;
+    margin: 0 0 15px;
+}
+
+.curiosidades_bio ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.curiosidades_bio li {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.curiosidades_bio li:last-child {
+    margin-bottom: 0;
+}
+
+.curiosidades_bio strong {
+    color: #e5c477;
+}
+
+@keyframes aparecerBio {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#bio_foto {
+  justify-self: right;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid #fffdf3;
+  border-radius: 3%;
+  box-shadow: 0 0 35px 8px rgba(255, 215, 0, 0.75);
+}
+
+
+
+
+/* ===== THE ERAS (HTML + CSS, setas em JS) ===== */
+
+.the_eras {
+  padding: 5% 10%;
+  background: linear-gradient(180deg, #fff6d2, #fffbef);
+}
+
+/* linha de cima: título à esquerda, setas à direita */
+.eras_topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 26px;
+}
+
+.the_eras_texto {
+  margin-bottom: 0;
+}
+
+/* ----- setas (o JS faz elas funcionarem) ----- */
+.eras_setas {
+  display: flex;
+  gap: 10px;
+}
+
+.seta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #e0b52a;
+  background: #fffbef;
+  font-size: 16px;
+  color: #17140c;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.seta:hover {
+  background: #f7d54a;
+  transform: scale(1.08);
+}
+
+/* o JS desativa a seta quando chega no começo/fim */
+.seta:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ----- janela + lista ----- */
+
+/* overflow: hidden esconde os cards de fora (sem scroll na página).
+   O padding/margin negativo evita cortar a sombra e o "pulinho" do hover */
+.eras_janela {
+  overflow: hidden;
+  padding: 10px 10px 40px;
+  margin: -10px -10px -20px;
+}
+
+.eras_lista {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* 4 cards por tela: 4 larguras + 3 gaps de 20px = 100% */
+.era {
+  flex: 0 0 calc(25% - 15px);
+  padding: 14px;
+  background: rgba(255, 251, 239, 0.85);
+  border: 2px solid rgba(224, 181, 42, 0.45);
+  border-radius: 18px;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.era img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+.era #imagem_maldita{
+ object-fit: cover;
+  object-position: center bottom;
+}
+
+.era_ano {
+  font-size: 24px;
+  font-weight: 500;
+  color:  #e0b52a;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.era_titulo {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 4px 0 10px;
+}
+
+.era_texto {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #5d5a4f;
+}
+
+/* card em destaque: o que está com o mouse em cima OU o padrão (.ativa) */
+.era:hover,
+.era.ativa {
+  border-color: #f7d54a;
+  background: linear-gradient(160deg, #fff0a8, #fffbe9);
+  box-shadow: 0 10px 30px rgba(224, 181, 42, 0.18);
+  transform: translateY(-5px);
+}
+
+/* se o mouse está em OUTRO card, o padrão perde o destaque */
+.eras_lista:has(.era:hover) .era.ativa:not(:hover) {
+  border-color: rgba(224, 181, 42, 0.45);
+  background: rgba(255, 251, 239, 0.85);
+  box-shadow: none;
+  transform: none;
+}
+
+/* ----- pontinhos ----- */
+.eras_dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.dot {
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f6ecd2;
+  transition: 0.35s;
+}
+
+.dot.ativo {
+  width: 64px;
+  background: #f7d54a;
+}
+
+/* mouse em algum card -> o ponto padrão apaga */
+.the_eras:has(.era:hover) .dot.ativo {
+  width: 40px;
+  background: #f6ecd2;
+}
+
+/* ...e o ponto do mesmo número do card acende */
+.the_eras:has(.era:nth-child(1):hover) .dot:nth-child(1),
+.the_eras:has(.era:nth-child(2):hover) .dot:nth-child(2),
+.the_eras:has(.era:nth-child(3):hover) .dot:nth-child(3),
+.the_eras:has(.era:nth-child(4):hover) .dot:nth-child(4),
+.the_eras:has(.era:nth-child(5):hover) .dot:nth-child(5),
+.the_eras:has(.era:nth-child(6):hover) .dot:nth-child(6),
+.the_eras:has(.era:nth-child(7):hover) .dot:nth-child(7),
+.the_eras:has(.era:nth-child(8):hover) .dot:nth-child(8),
+.the_eras:has(.era:nth-child(9):hover) .dot:nth-child(9) {
+  width: 64px;
+  background: #f7d54a;
+}
+
+/* ===== EXPLORAR A CARREIRA ===== */
+
+.explorar_carreira {
+  padding: 5% 10%;
+  background: linear-gradient(180deg, #fffbef, #fff6d2);
+}
+
+/* ----- abas ----- */
+.carreira_titulos {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(224, 181, 42, 0.45);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.aba {
+  padding: 12px 22px;
+  margin-bottom: -1px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5d5a4f;
+  white-space: nowrap;
+  border-bottom: 4px solid transparent;
+  transition: 0.35s;
+}
+
+.aba:hover {
+  color: #17140c;
+}
+
+.aba.ativa {
+  color: #17140c;
+  font-weight: 600;
+  border-bottom-color: #f7d54a;
+}
+
+/* ----- painéis: só o que tem .ativo aparece (o JS troca) ----- */
+.painel {
+  display: none;
+}
+
+.painel.ativo {
+  display: block;
+  animation: aparecer 0.45s;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* ----- galeria ----- */
+.galeria_trilho {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.galeria_trilho .seta {
+  flex: none;
+}
+
+.galeria_fotos {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  min-width: 0; 
+  padding: 10px 4px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.galeria_fotos::-webkit-scrollbar {
+  display: none;
+}
+
+.galeria_fotos img {
+  flex: none;
+  width: 190px;
+  aspect-ratio: 3 / 4.2;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  scroll-snap-align: start;
+  transition: 0.35s;
+}
+
+.galeria_fotos img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(224, 181, 42, 0.35);
+}
+
+.painel_conquistas.ativo {
+  display: flex;
+  gap: 20px;
+}
+
+.painel_conquistas article {
+  flex: 1;
+  padding: 14px;
+  background: rgba(255, 251, 239, 0.85);
+  border: 2px solid rgba(224, 181, 42, 0.45);
+  border-radius: 18px;
+  transition: 0.35s;
+}
+
+.painel_conquistas article:hover {
+  border-color: #f7d54a;
+  background: linear-gradient(160deg, #fff0a8, #fffbe9);
+  box-shadow: 0 10px 30px rgba(224, 181, 42, 0.18);
+  transform: translateY(-5px);
+}
+
+.painel_conquistas img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.painel_conquistas .h2 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.painel_conquistas p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5d5a4f;
+}
+
+.painel_entrevistas.ativo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.painel_entrevistas iframe {
+  flex: 0 0 calc(33.33% - 14px);
+  height: 250px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(224, 181, 42, 0.18);
+}
+
+/* ===== SPOTIFY (MÚSICAS E VÍDEOS) ===== */
+
+.spotify {
+  padding: 5% 10%;
+  background: linear-gradient(180deg, #fff6d2, #ffefa8 50%, #fff6d2);
+}
+
+/* linha de cima: título à esquerda, Músicas/Vídeos à direita */
+.spotify_topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.spotify_sub {
+  font-size: 13px;
+  color: #5d5a4f;
+}
+
+.spotify_alternar {
+  display: flex;
+  padding: 3px;
+  border: 1px solid rgba(224, 181, 42, 0.45);
+  border-radius: 999px;
+  background: #fffbef;
+}
+
+.spotify_alternar button {
+  padding: 7px 22px;
+  border-radius: 999px;
+  font-size: 12px;
+  transition: 0.35s;
+}
+
+.spotify_alternar .ativo {
+  background: #f7d54a;
+  font-weight: 600;
+}
+
+/* ----- as 3 colunas ----- */
+.spotify_corpo {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.destaque,
+.faixas,
+.albuns {
+  background: rgba(255, 251, 239, 0.85);
+  border: 1px solid rgba(224, 181, 42, 0.45);
+  border-radius: 18px;
+}
+
+/* link pequeno (Ver todas / Ver todos) */
+.spotify_link {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.35s;
+}
+
+.spotify_link:hover {
+  color: #e0b52a;
+}
+
+/* ----- esquerda: capa em destaque ----- */
+.destaque {
+  flex: 0 0 29%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.destaque img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.destaque_texto {
+  padding: 20px 20px 24px;
+}
+
+.destaque_titulo {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.destaque_info {
+  margin: 4px 0 16px;
+  font-size: 12px;
+  color: #5d5a4f;
+}
+
+.destaque .btn_cheio {
+  display: inline-block;
+}
+
+/* ----- meio: faixas ----- */
+.faixas {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 20px 20px;
+}
+
+.faixa {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(224, 181, 42, 0.3);
+}
+
+.faixa_num {
+  width: 18px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.faixa_info {
+  flex: 1;
+  min-width: 0;
+}
+
+.faixa_info b {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.faixa_info small {
+  display: block;
+  font-size: 11px;
+  color: #5d5a4f;
+}
+
+.faixa_tempo {
+  font-size: 12px;
+  color: #5d5a4f;
+}
+
+/* usa o .seta (redondinho) e desenha o triângulo do play */
+.faixa_play {
+  flex: none;
+  width: 34px;
+  height: 34px;
+}
+
+.faixa_play::before {
+  content: "";
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent #17140c;
+}
+
+.faixas .spotify_link {
+  display: block;
+  padding-top: 18px;
+  text-align: center;
+}
+
+/* ----- direita: álbuns ----- */
+.albuns {
+  flex: 0 0 28%;
+  padding: 20px;
+}
+
+.albuns_topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.albuns_titulo {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.album {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 6px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  color: #17140c;
+  text-align: left;
+  transition: 0.35s;
+}
+
+.album:hover {
+  transform: translateX(4px);
+}
+
+/* álbum que está na capa da esquerda (o JS coloca/tira) */
+.album.ativo {
+  border-color: #f7d54a;
+  background: linear-gradient(160deg, #fff0a8, #fffbe9);
+}
+
+.album img {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album_nome,
+.album_ano {
+  display: block;
+}
+
+.album_nome {
+  font-size: 13px;
+}
+
+.album_ano {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #5d5a4f;
+}
+
+
+.faixa_play::before {
+  content: "";
+  margin-left: 3px;
+  border-style: solid;
+  border-width: 5px 0 5px 8px;
+  border-color: transparent transparent transparent #17140c;
+  transition: 0.2s;
+}
+
+.faixa_play.tocando::before {
+  content: "";
+  margin-left: 0;
+  border-style: double;
+  border-width: 0px 0px 0px 8px; 
+  border-color: #17140c;
+  height: 10px;
+}
+
+
+
+
+/* ===== QUIZ ===== */
+
+.quiz {
+  padding: 5% 10%;
+  background: linear-gradient(180deg, #fff6d2, #fffbef);
+}
+
+.quiz_caixa {
+  max-width: 720px;
+  margin: 24px auto 0;
+  padding: 28px;
+  background: rgba(255, 251, 239, 0.85);
+  border: 2px solid rgba(224, 181, 42, 0.45);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(224, 181, 42, 0.18);
+}
+
+.quiz_topo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e0b52a;
+  font-weight: 600;
+}
+
+.quiz_barra {
+  height: 4px;
+  margin-bottom: 24px;
+  border-radius: 4px;
+  background: #f6ecd2;
+  overflow: hidden;
+}
+
+.quiz_barra div {
+  height: 100%;
+  width: 0;
+  background: #f7d54a;
+  transition: width 0.4s;
+}
+
+.pergunta,
+.quiz_resultado {
+  display: none;
+}
+
+.pergunta.ativa,
+.quiz_resultado.ativa {
+  display: block;
+  animation: 0.45s;
+}
+
+.quiz_pergunta {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #17140c;
+}
+
+/* ----- respostas (2 por linha) ----- */
+.quiz_opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn_quiz {
+  flex: 0 0 calc(50% - 6px);
+  padding: 14px 16px;
+  border: 1px solid #e0b52a;
+  border-radius: 12px;
+  background: #fffbef;
+  font-size: 14px;
+  color: #17140c;
+  text-align: left;
+  transition: 0.25s;
+}
+
+.btn_quiz:hover:not(:disabled) {
+  background: #f7d54a;
+  transform: translateY(-2px);
+}
+
+.btn_quiz:disabled {
+  cursor: default;
+}
+
+/* depois de responder: a certa pisca em verde devagar, as outras ficam vermelhas */
+.btn_quiz.certa {
+  border-color: #8cb520;
+  animation: piscar 1.6s ease-in-out infinite;
+}
+
+.btn_quiz.errada {
+  background: #ffd9d0;
+  border-color: #d0583a;
+}
+
+@keyframes piscar {
+  0%, 100% { background: #e5f5b8; }
+  50%      { background: #a6dc3c; }
+}
+
+/* ----- explicação (aparece depois de responder) ----- */
+.quiz_explicacao {
+  display: none;
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5d5a4f;
+}
+
+.pergunta.respondida .quiz_explicacao {
+  display: block;
+}
+
+.pergunta.acertou .quiz_explicacao::before {
+  content: "Acertou! ";
+  font-weight: 600;
+  color: #5d8a00;
+}
+
+.pergunta.errou .quiz_explicacao::before {
+  content: "Não foi dessa vez. ";
+  font-weight: 600;
+  color: #d0583a;
+}
+
+/* mensagem da tela final */
+.quiz_feedback {
+  min-height: 24px;
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #5d5a4f;
+}
+
+.quiz_caixa .botoes {
+  margin-top: 8px;
+}
+
+
+/* Fooooooooooteeeeeer */
+
+.footer {
+    width: 100%;
+    min-height: 170px;
+    padding: 35px 8%;
+    background-color: #1e1b17;
+    border-top: 1px solid #4b4028;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer_logo span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    color: #e5c477;
+    letter-spacing: -1px;
+}
+
+.footer_redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer_icones {
+    display: flex;
+    gap: 18px;
+}
+
+.icone_rede {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #a58b50;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #e5c477;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.icone_rede:hover {
+    background-color: #e5c477;
+    color: #1e1b17;
+}
+
+.footer_redes p {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #bdb5a5;
+    letter-spacing: 0.3px;
+}

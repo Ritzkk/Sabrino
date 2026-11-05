@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Site foda — Sabrina Carpenter</title>
+  <link rel="stylesheet" href="./Sabrina.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+
+  <!--Hero da imagem cabeçalho ou sla, Sabrina e botao para trocar para o outro-->
+  <header class="header">
+    <a class="logo" href="#">Beyound The <span>Spotlight</span></a>
+
+    <nav class="nav">
+      <a href="#">Sobre</a>
+      <a href="#">Carreira</a>
+      <a href="#">Conquistas</a>
+      <a href="#">Galeria</a>
+      <a href="#">Entrevistas</a>
+    </nav>
+
+    <div class="switch">
+      <a class="ativo" href="#">Sabrina</a>
+      <a href="#">Não vai ser mais o Patrick </a>
+    </div>
+  </header>
+
+
+  <main class="principal">
+    <div class="principal_texto">
+      <p class="artista_destaque">Artista em destaque • 01 / 02</p>
+      <p id="h1">Sabrina Carpenter</p>
+      <p class="roles">Cantora - Compositora - Gostosa</p>
+      <p class="descricao">Ela canta, faz musica sla. Ela dança até... Tem ums roupas que usa no stage bem maneiras e etc... </p>
+
+      <div class="botoes">
+        <button class="btn_cheio" type="button">Atalho 1</button>
+        <button class="btn_borda" type="button">Atalho 2</button>
+      </div>
+    </div>
+
+    <img id="principal_foto" src="./Imgs/Sabrina-Capa.jpg" alt="Sabrina Carpenter redonda">
+  </main>
+
+<!---Bio Bio Bio aaaa biooooo--->
+  <div class="bio">
+    <div class="bio_texto">
+      <p class="obs">em cima da Bio</p>
+      <p class="h2">Titulo bio</p>
+      <p id="bio">Sabrina Annlynn Carpenter (nascida em 11 de maio de 1999) é uma cantora, compositora e atriz americana. Entre seus prêmios, destacam- se dois Prêmios Grammy, um Prêmio Emmy, três Prêmios de Música Americana, um Prêmio Britânico e seis Prêmios de Video Music da MTV.
+        <br> <br> 
+      Ela foi reconhecida pela revista Time em sua lista Tempo 100 Próximo em 2024. Carpenter ganhou destaque inicialmente ao interpretar Maya Hart não série do Disney Channel  Girl Meets World (2014–2017). Ela assinou com uma gravadora de Hollywood e obteve sucesso moderado com seus álbuns de estudo, Olhos bem abertos (2015), Evolução (2016), Singular: Ato I (2018) e Singular: Ato II (2019).</p>
+
+      <div class="botoes">
+        <button id="btn_bio" class="btn_cheio" type="button">mostrar curiosidades</button>
+      </div>
+      <div class="curiosidades_bio" id="curiosidades_bio" hidden>
+    <h3>Você sabia?</h3>
+
+    <ul>
+        <li>
+            <strong>Sua Primeira música se chamava "Lights":</strong>
+            Sabrina escreveu sua primeira composição aos 10 anos. Ela mesma já brincou que a música não era muito boa.
+        </li>
+
+        <li>
+            <strong>Estúdio particular:</strong>
+            Aos 10 anos, ganhou do pai um estúdio de gravação roxo construído no porão de casa.
+        </li>
+
+        <li>
+            <strong>Conexão com Os Simpsons:</strong>
+            Sabrina é sobrinha da atriz Nancy Cartwright, a voz original do Bart Simpson.
+        </li>
+    </ul>
+</div>
+    </div>
+
+    <img id="bio_foto" src="./Imgs/Sabrina_bio.jpg" alt="Sabrina carpenter quadrada">
+  </div>
+
+<!---ERAS ERAS ERAS ERAS---> 
+ <div class="the_eras">
+
+
+    <div class="eras_topo">
+      <div class="the_eras_texto">
+        <p class="obs">The eras</p>
+        <p class="h2">Uma carreira do barulho (lol)</p>
+      </div>
+
+      <div class="eras_setas">
+        <button class="seta" id="eras_anterior" type="button" aria-label="Anterior">←</button>
+        <button class="seta" id="eras_proximo" type="button" aria-label="Próximo">→</button>
+      </div>
+    </div>
+
+    <div class="eras_janela">
+      <div class="eras_lista">
+
+        <article class="era ativa">
+          <img src="./Imgs/Sabrina-2010.jpg" alt="Sabrina Carpenter no início da carreira">
+          <p class="era_ano">2010 - 2011</p>
+          <p class="era_titulo">Os Primeiros Passos</p>
+          <p class="era_texto">Sabrina começou a chamar atenção ainda criança, publicando vídeos de covers e participando, em 2010, do concurso online "The Next Miley Cyrus Project", no qual conquistou o terceiro lugar. Em 2011, fez sua estreia profissional como atriz em "Law & Order: SVU", dando início à sua trajetória na indústria do entretenimento.</p>
+        </article>
+
+        <article class="era">
+          <img id="imagem_maldita" src="./Imgs/Sabrina-2012.jpg" alt="Sabrina Carpenter como Maya Hart em Girl Mee World">
+          <p class="era_ano">2012 - 2015</p>
+          <p class="era_titulo">A Ascensão na Disney</p>
+          <p class="era_texto">Após participar de produções como "The Goodwin Games" e "Sofia the First", Sabrina conquistou seu primeiro grande papel como Maya Hart em "Girl Meets World", série do Disney Channel lançada em 2014. No mesmo ano, iniciou oficialmente sua carreira musical com o EP "Can't Blame a Girl for Trying". Em 2015, lançou seu primeiro álbum de estúdio, "Eyes Wide Open", conciliando a atuação com seus primeiros passos como cantora.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Evolution_-_Álbum.png" alt="Sabrina Carpenter na era Evolution">
+          <p class="era_ano">2016 - 2017</p>
+          <p class="era_titulo">Evolution e Amadurecimento</p>
+          <p class="era_texto">Em 2016, Sabrina lançou seu segundo álbum, "EVOLution", apresentando uma sonoridade mais dançante e uma identidade musical mais madura. Canções como "Thumbs" e "On Purpose" ajudaram a fortalecer sua presença no pop. Em 2017, participou da turnê "Dangerous Woman Tour", de Ariana Grande, como atração de abertura, incluindo apresentações no Brasil. Foi também o período de encerramento de "Girl Meets World", permitindo que Sabrina dedicasse cada vez mais atenção à música.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Sabrina-2018.jpg" alt="Sabrina Carpenter na era Singular">
+          <p class="era_ano">2018 - 2019</p>
+          <p class="era_titulo">Singular: Uma Nova Identidade</p>
+          <p class="era_texto">Com "Singular: Act I", lançado em 2018, e "Singular: Act II", em 2019, Sabrina explorou uma sonoridade pop mais eletrônica e sofisticada. Músicas como "Almost Love", "Sue Me" e "In My Bed" marcaram essa fase de transformação artística. Paralelamente, continuou trabalhando como atriz em produções como "The Hate U Give" e "Tall Girl", demonstrando sua versatilidade no entretenimento.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Sabrina-2020.jpg" alt="Sabrina Carpenter durante a fase Skin">
+          <p class="era_ano">2020 - 2021</p>
+          <p class="era_titulo">Uma Nova Fase</p>
+          <p class="era_texto">Após um período de transição, Sabrina começou a construir uma nova identidade artística. Em 2021, assinou com a gravadora Island Records e lançou "Skin", single que ganhou grande repercussão após especulações envolvendo a música "drivers license", de Olivia Rodrigo. Apesar das discussões nas redes sociais, Sabrina seguiu desenvolvendo seu próprio caminho musical, preparando o terreno para uma fase mais pessoal e independente.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Sabrina-2022.jpg" alt="Sabrina Carpenter na era Emails I Can't Send">
+          <p class="era_ano">2022 - 2023</p>
+          <p class="era_titulo">Emails I Can't Send</p>
+          <p class="era_texto">Em 2022, lançou "Emails I Can't Send", seu quinto álbum de estúdio, marcado por letras mais pessoais, vulneráveis e autobiográficas. Músicas como "Nonsense", "Because I Liked a Boy" e "Feather" ampliaram sua popularidade e conquistaram novos públicos. Em 2023, lançou o EP natalino "fruitcake" e ganhou ainda mais visibilidade internacional ao participar como atração de abertura da "The Eras Tour", de Taylor Swift, incluindo os shows realizados no Brasil.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Espresso-2024.png" alt="Sabrina Carpenter na era Short n' Sweet">
+          <p class="era_ano">2024</p>
+          <p class="era_titulo">A Explosão Mundial</p>
+          <p class="era_texto">2024 foi o grande ponto de virada da carreira de Sabrina. Em abril, lançou "Espresso", que rapidamente se tornou um fenômeno mundial. Em junho, "Please Please Please" alcançou o primeiro lugar da Billboard Hot 100, sua primeira liderança na parada. Em agosto, lançou "Short n' Sweet", seu sexto álbum de estúdio, que também chegou ao topo das paradas. Com sucessos como "Taste", Sabrina conquistou reconhecimento internacional, estreou no Coachella e iniciou sua própria turnê de arenas, consolidando-se como uma das maiores estrelas pop do momento.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Sabrina-2025.jpg" alt="Sabrina Carpenter na era Man's Best Friend">
+          <p class="era_ano">2025</p>
+          <p class="era_titulo">O Reconhecimento e a Consolidação</p>
+          <p class="era_texto">Após o sucesso mundial de "Short n' Sweet", Sabrina alcançou um novo patamar de reconhecimento em 2025. No Grammy Awards, conquistou seus dois primeiros prêmios: Melhor Performance Pop Solo por "Espresso" e Melhor Álbum Vocal Pop por "Short n' Sweet". Em junho, lançou "Manchild", que estreou diretamente no topo da Billboard Hot 100. Em agosto, apresentou seu sétimo álbum de estúdio, "Man's Best Friend", que também estreou em primeiro lugar na Billboard 200, reafirmando sua força na indústria musical.</p>
+        </article>
+
+        <article class="era">
+          <img src="./Imgs/Sabrina-2026.jpg" alt="Sabrina Carpenter em apresentações de 2026">
+          <p class="era_ano">2026</p>
+          <p class="era_titulo">Uma Estrela Global</p>
+          <p class="era_texto">Em 2026, Sabrina continuou expandindo sua presença internacional. Em março, retornou ao Brasil como uma das atrações principais do Lollapalooza, quase dez anos após sua primeira apresentação no país. Em abril, estreou como headliner do Coachella e lançou o videoclipe de "House Tour", dirigido por ela e Margaret Qualley. A artista também continuou promovendo o universo de "Man's Best Friend", demonstrando sua evolução de atriz e cantora em ascensão para uma das principais figuras do pop mundial.</p>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="eras_dots">
+      <span class="dot ativo"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+  </div>
+
+  <!---Explorar carreira--->
+  <div class="explorar_carreira">
+    <p class="obs">Explorar a carreira</p>
+
+    
+    <div class="carreira_titulos">
+      <button class="aba ativa" type="button" data-alvo="galeria">Galeria</button>
+      <button class="aba" type="button" data-alvo="conquistas">Conquistas</button>
+      <button class="aba" type="button" data-alvo="entrevistas">Entrevistas</button>
+    </div>
+
+    <!---Galeria--->
+    <div class="painel painel_galeria ativo" id="galeria">
+      <div class="galeria_trilho">
+        <button class="seta" id="galeria_anterior" type="button" aria-label="Anterior">←</button>
+
+        <div class="galeria_fotos" id="galeria_fotos">
+          <img src="./Imgs/Sabrina01.jpg" alt="Sabrina Carpenter, foto 1">
+          <img src="./Imgs/Sabrina02.jpg" alt="Sabrina Carpenter, foto 2">
+          <img src="./Imgs/Sabrina04.jpg" alt="Sabrina Carpenter, foto 3">
+          <img src="./Imgs/Sabrina05.jpg" alt="Sabrina Carpenter, foto 4">
+          <img src="./Imgs/Sabrina06.jpg" alt="Sabrina Carpenter, foto 5">
+          <img src="./Imgs/SabrinaCorinthians.jpg" alt="Sabrina Carpenter, foto 6">
+          <img src="./Imgs/Sabrina&Olivia.jpg" alt="Sabrina Carpenter, foto 7">
+          <img src="./Imgs/Sabrina07.jpg" alt="Sabrina Carpenter, foto 8">
+          <img src="./Imgs/Sabrina08.jpg" alt="Sabrina Carpenter, foto 9">
+          <img src="./Imgs/Sabrina09.jpg" alt="Sabrina Carpenter, foto 10">
+          <img src="./Imgs/Sabrina10.jpg" alt="Sabrina Carpenter, foto 11">
+          <img src="./Imgs/Sabrina11.jpg" alt="Sabrina Carpenter, foto 12">
+          <img src="./Imgs/Sabrina12.jpg" alt="Sabrina Carpenter, foto 13 FAAAAAAAAAAAZUELI">
+        </div>
+
+        <button class="seta" id="galeria_proximo" type="button" aria-label="Próximo">→</button>
+      </div>
+    </div>
+
+    <!---Conquistas--->
+    <div class="painel painel_conquistas" id="conquistas">
+      <article>
+        <img src="./Imgs/Sabrina_Grammy.jpg" alt="Sabrina Carpenter com os prêmios do Grammy">
+        <p class="h2">Grammy</p>
+        <p>2025: Best Pop Solo Performance — Espresso.</p>
+        <p>2025: Best Pop Vocal Album — Short n' Sweet.</p>
+      </article>
+
+      <article>
+        <img src="./Imgs/SabrinaVMA.jpg" alt="Sabrina Carpenter no VMA">
+        <p class="h2">VMAs</p>
+        <p>2024: Song of the Year — Espresso.</p>
+        <p>2025: 5 conquistas</p>
+        <p>2026: Best Collaboration & Best Editing</p>
+      </article>
+
+      <article>
+        <img src="./Imgs/SabrinaEmmy.jpg" alt="Sabrina Carpenter no Emmy">
+        <p class="h2">Emmy</p>
+        <p>2026: Outstanding Variety Special — The Muppet Show.</p>
+      </article>
+    </div>
+
+    <!---Entrevistas--->
+    <div class="painel painel_entrevistas" id="entrevistas">
+      <iframe src="https://www.youtube.com/embed/enaGNnGB99I" title="Entrevista 1" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/HrFnmpQrmLU" title="Entrevista 2" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/msnI0D1SDSg" title="Entrevista 3" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/c2FrKSKqM4Q" title="Entrevista 4" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/z_v89buOKT4" title="Entrevista 5" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/yMLwdOwGpfY" title="Entrevista 6" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+  </div>
+
+
+<!---Spotify Não precisa pro Lamelo (mei obvio kkkk)--->
+
+  <div class="spotify" id="Spotify">
+
+    <div class="spotify_topo">
+      <div class="spotify_titulo">
+        <p class="h2">♫ Músicas e vídeos</p>
+        <p class="spotify_sub">Ouça, assista e mergulhe no universo da Sabrina Carpenter.</p>
+      </div>
+
+      <!-- Vídeos: a troca de painel fica pra depois -->
+      <div class="spotify_alternar">
+        <button class="ativo" type="button">Músicas</button>
+        <button type="button">Vídeos</button>
+      </div>
+    </div>
+
+    <div class="spotify_corpo">
+
+      <!-- ESQUERDA: capa em destaque (o JS troca quando clica num álbum) -->
+      <div class="destaque">
+        <img id="destaque_capa" src="./Imgs/Sabrina-2025.jpg" alt="Capa do álbum Short n' Sweet">
+        <div class="destaque_texto">
+          <p class="destaque_titulo" id="destaque_titulo">Short n' Sweet</p>
+          <p class="destaque_info">Sabrina Carpenter • <span id="destaque_ano">2024</span></p>
+          <a class="btn_cheio" href="#" target="_blank" rel="noopener">Ouvir agora ↗</a>
+        </div>
+      </div>
+
+      <div class="faixas">
+
+  <!-- Bloco do Short n' Sweet (Já ativo por padrão) -->
+  <div class="lista_faixas ativo" id="faixas_short">
+    <div class="faixa">
+      <span class="faixa_num">1</span>
+      <div class="faixa_info"><b>Taste</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">2:37</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Taste"></button>
+      <audio class="audio_faixa" src="./Imgs/Taste - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+    <div class="faixa">
+      <span class="faixa_num">2</span>
+      <div class="faixa_info"><b>Please Please Please</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">3:06</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Please Please Please"></button>
+      <audio class="audio_faixa" src="./Imgs/Please Please Please - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+    <div class="faixa">
+      <span class="faixa_num">3</span>
+      <div class="faixa_info"><b>Good Graces</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">3:05</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Good Graces"></button>
+      <audio class="audio_faixa" src="./Imgs/Good Graces - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+    <div class="faixa">
+      <span class="faixa_num">4</span>
+      <div class="faixa_info"><b>Espresso</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">2:55</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Espresso"></button>
+      <audio class="audio_faixa" src="./Imgs/Sabrina Carpenter - Espresso - SabrinaCarpenterVEVO.mp3"></audio>
+    </div>
+  </div>
+
+
+<!--emails-->
+
+  <div class="lista_faixas" id="faixas_emails">
+     <div class="faixa">
+      <span class="faixa_num">1</span>
+      <div class="faixa_info"><b>Emails i can’t send<table></table></b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">1:44</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Emails"></button>
+      <audio class="audio_faixa" src="./Imgs/emails i can’t send - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+     <div class="faixa">
+      <span class="faixa_num">2</span>
+      <div class="faixa_info"><b>Vicious</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">2:29</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Emails"></button>
+    <audio class="audio_faixa" src="./Imgs/emails i can’t send - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+     <div class="faixa">
+      <span class="faixa_num">3</span>
+      <div class="faixa_info"><b>Read Your Mind</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">3:27</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Emails"></button>
+      <audio class="audio_faixa" src="./Imgs/emails i can’t send - Sabrina Carpenter.mp3"></audio>
+    </div>
+
+     <div class="faixa">
+      <span class="faixa_num">4</span>
+      <div class="faixa_info"><b>Tornado Warnings</b><small>Sabrina Carpenter</small></div>
+      <span class="faixa_tempo">3:24</span>
+      <button class="seta faixa_play" type="button" aria-label="Tocar Emails"></button>
+      <audio class="audio_faixa" src="./Imgs/emails i can’t send - Sabrina Carpenter.mp3"></audio>
+    </div>
+  </div>
+
+  <!---Man's Best Friend--->
+
+  <div class="lista_faixas" id="faixas_Mans">
+     <div class="faixa">
+        <span class="faixa_num">1</span>
+        <div class="faixa_info"><b>Manchild<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:33</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Manchild"></button>
+        <audio class="audio_faixa" src="./Imgs/Manchild - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+       <div class="faixa">
+        <span class="faixa_num">2</span>
+        <div class="faixa_info"><b>Tears<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">2:40</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Manchild"></button>
+        <audio class="audio_faixa" src="./Imgs/Manchild - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">3</span>
+        <div class="faixa_info"><b>My Man on Willpower<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:17</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Manchild"></button>
+        <audio class="audio_faixa" src="./Imgs/Manchild - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">4</span>
+        <div class="faixa_info"><b>Sugar Talking<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:03</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Manchild"></button>
+        <audio class="audio_faixa" src="./Imgs/Manchild - Sabrina Carpenter.mp3"></audio>
+      </div>
+  </div>
+
+  <!---Singular 1--->
+  <div class="lista_faixas" id="faixas_Sing">
+     <div class="faixa">
+        <span class="faixa_num">1</span>
+        <div class="faixa_info"><b>Almost Love<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:32</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Almost"></button>
+        <audio class="audio_faixa" src="./Imgs/Almost Love - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">2</span>
+        <div class="faixa_info"><b>Paris<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:38</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Almost"></button>
+        <audio class="audio_faixa" src="./Imgs/Almost Love - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">3</span>
+        <div class="faixa_info"><b>Hold Tight<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">2:55</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Almost"></button>
+        <audio class="audio_faixa" src="./Imgs/Almost Love - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">4</span>
+        <div class="faixa_info"><b>Sue me<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">2:59</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Almost"></button>
+        <audio class="audio_faixa" src="./Imgs/Almost Love - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+    </div>
+
+  <!---Singular 2--->
+
+  <div class="lista_faixas" id="faixas_Sing2">
+     <div class="faixa">
+        <span class="faixa_num">1</span>
+        <div class="faixa_info"><b>In My Bed<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:09</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Bed"></button>
+        <audio class="audio_faixa" src="./Imgs/In My Bed - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">2</span>
+        <div class="faixa_info"><b>Pushing 20<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">2:46</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Bed"></button>
+        <audio class="audio_faixa" src="./Imgs/In My Bed - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">3</span>
+        <div class="faixa_info"><b>I Can't Stop Me<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:42</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Bed"></button>
+        <audio class="audio_faixa" src="./Imgs/In My Bed - Sabrina Carpenter.mp3"></audio>
+      </div>
+
+      <div class="faixa">
+        <span class="faixa_num">4</span>
+        <div class="faixa_info"><b>Take Off All Your Cool<table></table></b><small>Sabrina Carpenter</small></div>
+        <span class="faixa_tempo">3:03</span>
+        <button class="seta faixa_play" type="button" aria-label="Tocar Bed"></button>
+        <audio class="audio_faixa" src="./Imgs/In My Bed - Sabrina Carpenter.mp3"></audio>
+      </div>
+  </div>
+
+
+
+  <a class="spotify_link" href="#" target="_blank" rel="noopener">Ver todas as músicas →</a>
+</div>
+
+      <!-- DIREITA: álbuns (clicou, troca a capa da esquerda) -->
+      <div class="albuns">
+        <div class="albuns_topo">
+          <p class="albuns_titulo">Álbuns</p>
+          <a class="spotify_link" href="#" target="_blank" rel="noopener">Ver todos →</a>
+        </div>
+        
+
+         <button class="album" type="button">
+          <img src="./Imgs/Sabrina-2026.jpg" alt="Capa de Short and Sweet">
+          <span class="album_texto">
+            <span class="album_nome">Short n' Sweet</span>
+            <span class="album_ano">2024</span>
+          </span>
+        </button>
+
+         <button class="album" type="button">
+          <img src="./Imgs/Sabrina-2025.jpg" alt="Capa de Short and Sweet">
+          <span class="album_texto">
+            <span class="album_nome">Short n' Sweet</span>
+            <span class="album_ano">2024</span>
+          </span>
+        </button>
+
+        <button class="album" type="button">
+          <img src="./Imgs/Sabrina-2022.jpg" alt="Capa de Emails I Can't Send">
+          <span class="album_texto">
+            <span class="album_nome">Emails I Can't Send</span>
+            <span class="album_ano">2022</span>
+          </span>
+        </button>
+
+        <button class="album" type="button">
+          <img src="./Imgs/Sabrina-2018.jpg" alt="Capa de Singular Act I">
+          <span class="album_texto">
+            <span class="album_nome">Singular Act I</span>
+            <span class="album_ano">2018</span>
+          </span>
+        </button>
+
+        <button class="album" type="button">
+          <img src="./Imgs/Sabrina_Carpenter_-_Singular_Act_II.png" alt="Capa de Singular Act II">
+          <span class="album_texto">
+            <span class="album_nome">Singular Act II</span>
+            <span class="album_ano">2019</span>
+          </span>
+        </button>
+      </div>
+
+    </div>
+   <iframe src="" frameborder="0"></iframe>
+  </div>
+
+  <!---Quiz aquiiii!!!!--->
+
+  <section class="quiz" id="quiz">
+    <p class="obs">Quiz</p>
+    <p class="h2">Quanto você sabe sobre Sabrina Carpenter?</p>
+
+    <div class="quiz_caixa">
+      <div class="quiz_topo">
+        <span id="quiz_progresso">Pergunta 1 de 5</span>
+        <span id="quiz_pontos">0 pontos</span>
+      </div>
+      <div class="quiz_barra"><div id="quiz_barra_cheia"></div></div>
+
+      <div class="pergunta ativa">
+        <p class="quiz_pergunta">Em qual série da Disney Channel Sabrina interpretou a personagem Maya?</p>
+        <div class="quiz_opcoes">
+          <button class="btn_quiz" type="button">Austin & Ally</button>
+          <button class="btn_quiz" type="button" data-certa>Girl Meets World</button>
+          <button class="btn_quiz" type="button">Liv e Maddie</button>
+          <button class="btn_quiz" type="button">Icarly</button>
+        </div>
+        <p class="quiz_explicacao">Maya Hart foi o primeiro grande papel dela, em Girl Meets World, série lançada em 2014.</p>
+      </div>
+
+      <div class="pergunta">
+        <p class="quiz_pergunta">Qual foi o primeiro álbum de estúdio dela, lançado em 2015?</p>
+        <div class="quiz_opcoes">
+          <button class="btn_quiz" type="button">EVOLution</button>
+          <button class="btn_quiz" type="button">Singular: Act I</button>
+          <button class="btn_quiz" type="button" data-certa>Eyes Wide Open</button>
+          <button class="btn_quiz" type="button">Emails I Can't Send</button>
+        </div>
+        <p class="quiz_explicacao">Eyes Wide Open saiu em 2015. O EVOLution veio só em 2016.</p>
+      </div>
+
+      <div class="pergunta">
+        <p class="quiz_pergunta">Qual música de 2024 deu a ela o primeiro #1 na Billboard Hot 100?</p>
+        <div class="quiz_opcoes">
+          <button class="btn_quiz" type="button">Espresso</button>
+          <button class="btn_quiz" type="button">Taste</button>
+          <button class="btn_quiz" type="button">Nonsense</button>
+          <button class="btn_quiz" type="button" data-certa>Please Please Please</button>
+        </div>
+        <p class="quiz_explicacao">Please Please Please chegou ao topo em junho de 2024. O Espresso foi o fenômeno de abril.</p>
+      </div>
+
+      <div class="pergunta">
+        <p class="quiz_pergunta">Em 2023, Sabrina foi atração de abertura de qual turnê?</p>
+        <div class="quiz_opcoes">
+          <button class="btn_quiz" type="button">Dangerous Woman Tour</button>
+          <button class="btn_quiz" type="button" data-certa>The Eras Tour</button>
+          <button class="btn_quiz" type="button">Sweetener World Tour</button>
+          <button class="btn_quiz" type="button">Renaissance World Tour</button>
+        </div>
+        <p class="quiz_explicacao">Ela abriu shows da The Eras Tour, da Taylor Swift, em 2023.</p>
+      </div>
+
+      <div class="pergunta">
+        <p class="quiz_pergunta">Qual música rendeu a ela o Grammy de Melhor Performance Pop Solo em 2025?</p>
+        <div class="quiz_opcoes">
+          <button class="btn_quiz" type="button" data-certa>Espresso</button>
+          <button class="btn_quiz" type="button">Please Please Please</button>
+          <button class="btn_quiz" type="button">Taste</button>
+          <button class="btn_quiz" type="button">Bed Chem</button>
+        </div>
+        <p class="quiz_explicacao">Espresso levou Melhor Performance Pop Solo, e Short n' Sweet levou Melhor Álbum Vocal Pop.</p>
+      </div>
+
+      <div class="quiz_resultado">
+        <p class="quiz_pergunta" id="quiz_resultado_texto"></p>
+        <p class="quiz_feedback" id="quiz_mensagem"></p>
+      </div>
+
+      <div class="botoes">
+        <button id="quiz_proxima" class="btn_cheio" type="button" hidden>Próxima</button>
+        <button id="quiz_reiniciar" class="btn_borda" type="button" hidden>Jogar de novo</button>
+      </div>
+    </div>
+  </section>
+
+ <footer class="footer">
+    <div class="footer_logo">
+        <span>Beyond the Spotlight 🔥</span>
+    </div>
+
+    <div class="footer_redes">
+        <div class="footer_icones">
+            <span class="icone_rede">
+                <i class="fa-brands fa-spotify"></i>
+            </span>
+
+            <span class="icone_rede">
+                <i class="fa-brands fa-tiktok"></i>
+            </span>
+
+            <span class="icone_rede">
+                <i class="fa-brands fa-youtube"></i>
+            </span>
+        </div>
+
+        <p>Projeto de Web, Salve professor!</p>
+    </div>
+</footer>
+
+
+
+
+  <script src="./Sabrina.js" defer></script>
+</body>
+</html>
