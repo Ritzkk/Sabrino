@@ -1,5 +1,8 @@
+/*----------TROCA DE TEMA NO OUTRP JS!!!!----------*/ 
+
 /*----------BIO----------*/
-  const btnBio = document.getElementById("btn_bio");
+
+const btnBio = document.getElementById("btn_bio");
 const curiosidadesBio = document.getElementById("curiosidades_bio");
 
 btnBio.addEventListener("click", () => {
@@ -12,6 +15,7 @@ btnBio.addEventListener("click", () => {
         : "mostrar curiosidades";
 });
 
+
 /*----------ERAS----------*/
 
 const lista = document.querySelector(".eras_lista");
@@ -19,8 +23,8 @@ const cards = lista.querySelectorAll(".era");
 const btnAnterior = document.getElementById("eras_anterior");
 const btnProximo = document.getElementById("eras_proximo");
 
-const VISIVEIS = 4; 
-let posicao = 0;   
+const VISIVEIS = 4;
+let posicao = 0;
 
 function mover(novaPosicao) {
   const ultima = cards.length - VISIVEIS;
@@ -42,13 +46,11 @@ window.addEventListener("resize", () => mover(posicao));
 mover(0);
 
 
-
-
-/*----------EXPLORAR CARREIRA----------*/ 
+/*----------EXPLORAR CARREIRA----------*/
 
 const abas = document.querySelectorAll(".aba");
 const paineis = document.querySelectorAll(".painel");
- 
+
 abas.forEach((aba) => {
   aba.addEventListener("click", () => {
     abas.forEach((a) => a.classList.toggle("ativa", a === aba));
@@ -56,17 +58,17 @@ abas.forEach((aba) => {
     atualizarSetasGaleria();
   });
 });
- 
+
 const fotos = document.getElementById("galeria_fotos");
 const btnGaleriaAnterior = document.getElementById("galeria_anterior");
 const btnGaleriaProximo = document.getElementById("galeria_proximo");
- 
+
 function atualizarSetasGaleria() {
   const fim = fotos.scrollWidth - fotos.clientWidth - 1;
   btnGaleriaAnterior.disabled = fotos.scrollLeft <= 0;
   btnGaleriaProximo.disabled = fotos.scrollLeft >= fim;
 }
- 
+
 btnGaleriaAnterior.addEventListener("click", () => fotos.scrollBy({ left: -fotos.clientWidth * 0.8 }));
 btnGaleriaProximo.addEventListener("click", () => fotos.scrollBy({ left: fotos.clientWidth * 0.8 }));
 fotos.addEventListener("scroll", atualizarSetasGaleria);
@@ -74,7 +76,7 @@ window.addEventListener("resize", atualizarSetasGaleria);
 atualizarSetasGaleria();
 
 
-/*---------- SPOTIFY: áudio (declarado antes porque a troca de álbum usa) ----------*/
+/*----------SPOTIFY: AUDIO----------*/
 
 let audioAtual = null;
 let botaoAtivo = null;
@@ -90,30 +92,43 @@ function pararAudio() {
 }
 
 
-/*---------- SPOTIFY: álbuns e faixas ----------*/
+/*----------SPOTIFY: ALBUNS E FAIXAS----------*/
 
 const albuns = document.querySelectorAll(".album");
 const destaqueCapa = document.getElementById("destaque_capa");
 const destaqueTitulo = document.getElementById("destaque_titulo");
 const destaqueAno = document.getElementById("destaque_ano");
 const listasFaixas = document.querySelectorAll(".lista_faixas");
+const listasVideos = document.querySelectorAll(".lista_videos");
 
-/* Ordem dos álbuns no HTML (de cima pra baixo) -> id da lista de faixas.
-   Se o botão tiver data-faixas="id", o data-faixas ganha desse array. */
 const faixasPorAlbum = [
-  "faixas_Mans",    // 1º botão (Sabrina-2026.jpg) -> Man's Best Friend
-  "faixas_short",   // 2º botão -> Short n' Sweet
-  "faixas_emails",  // 3º botão -> Emails I Can't Send
-  "faixas_Sing",    // 4º botão -> Singular Act I
-  "faixas_Sing2"    // 5º botão -> Singular Act II
+  "faixas_Mans",
+  "faixas_short",
+  "faixas_emails",
+  "faixas_Sing",
+  "faixas_Sing2"
 ];
 
-// mostra só a lista com o id pedido e esconde as outras
+let faixaAtual = null;
+let modoVideos = false;
+
 function mostrarFaixas(id) {
+  faixaAtual = id;
+
   listasFaixas.forEach((l) => {
-    const ativa = l.id === id;
+    const ativa = l.id === id && !modoVideos;
     l.classList.toggle("ativo", ativa);
     l.style.display = ativa ? "block" : "none";
+  });
+
+  const idVideos = id.replace("faixas_", "videos_");
+
+  listasVideos.forEach((v) => {
+    const ativo = v.id === idVideos && modoVideos;
+    if (!ativo && v.classList.contains("ativo")) {
+      v.querySelectorAll("iframe").forEach((f) => { f.src = f.src; });
+    }
+    v.classList.toggle("ativo", ativo);
   });
 }
 
@@ -128,13 +143,12 @@ albuns.forEach((album, i) => {
 
     albuns.forEach((a) => a.classList.toggle("ativo", a === album));
 
-    // troca as 4 faixas e para a música que estava tocando
     pararAudio();
+    pararVideos();
     mostrarFaixas(album.dataset.faixas || faixasPorAlbum[i]);
   });
 });
 
-// estado inicial: acha o álbum cuja capa já está em destaque
 let albumInicial = Array.from(albuns).findIndex(
   (a) => a.querySelector("img").src === destaqueCapa.src
 );
@@ -144,24 +158,21 @@ albuns[albumInicial].classList.add("ativo");
 mostrarFaixas(albuns[albumInicial].dataset.faixas || faixasPorAlbum[albumInicial]);
 
 
-/*----Spotify parte de dar play na msc.----*/
+/*----------SPOTIFY: PLAY----------*/
 
 const botoesPlay = document.querySelectorAll(".faixa_play");
 
 botoesPlay.forEach((botao) => {
   botao.addEventListener("click", () => {
-    // Pega o elemento <audio> que está dentro do mesmo bloco .faixa
     const faixa = botao.closest(".faixa");
     const meuAudio = faixa.querySelector(".audio_faixa");
 
     if (!meuAudio) return;
 
-    // Se já tiver algum áudio tocando em outra faixa
     if (audioAtual && audioAtual !== meuAudio) {
       pararAudio();
     }
 
-    // Alterna play/pause da música atual
     if (meuAudio.paused) {
       meuAudio.play();
       botao.classList.add("tocando");
@@ -174,7 +185,6 @@ botoesPlay.forEach((botao) => {
       botaoAtivo = null;
     }
 
-    // Quando a música terminar sozinha
     meuAudio.onended = () => {
       botao.classList.remove("tocando");
       audioAtual = null;
@@ -184,11 +194,46 @@ botoesPlay.forEach((botao) => {
 });
 
 
+/*----------SPOTIFY: MUSICAS E VIDEOS----------*/
 
-/*---------- QUIZ ---------- */
+const botoesAlternar = document.querySelectorAll(".spotify_alternar button");
+const caixaFaixas = document.querySelector(".faixas");
+const painelVideos = document.getElementById("videos_faixas");
 
-const quizPerguntas = document.querySelectorAll(".pergunta");   
-const quizBotoes = document.querySelectorAll(".btn_quiz");       
+botoesAlternar.forEach((botao) => {
+  botao.addEventListener("click", () => {
+    modoVideos = botao.dataset.alvo === "videos";
+
+    botoesAlternar.forEach((b) => b.classList.toggle("ativo", b === botao));
+    caixaFaixas.classList.toggle("modo_videos", modoVideos);
+    painelVideos.classList.toggle("ativo", modoVideos);
+
+    pararAudio();
+    pararVideos();
+    mostrarFaixas(faixaAtual);
+  });
+});
+
+function pararVideos() {
+  document.querySelectorAll(".lista_videos video").forEach((video) => {
+    video.pause();
+    video.load();
+  });
+
+  document.querySelectorAll(".lista_videos iframe").forEach((f) => {
+    f.src = f.src;
+  });
+
+  const iframesYoutube = document.querySelectorAll(".lista_videos iframe");
+  iframesYoutube.forEach((f) => {
+    f.src = f.src;
+  });
+}
+
+/*----------QUIZ----------*/
+
+const quizPerguntas = document.querySelectorAll(".pergunta");
+const quizBotoes = document.querySelectorAll(".btn_quiz");
 const quizResultado = document.querySelector(".quiz_resultado");
 const quizResultadoTexto = document.getElementById("quiz_resultado_texto");
 const quizMensagem = document.getElementById("quiz_mensagem");
@@ -198,7 +243,7 @@ const quizBarra = document.getElementById("quiz_barra_cheia");
 const quizProxima = document.getElementById("quiz_proxima");
 const quizReiniciar = document.getElementById("quiz_reiniciar");
 
-let quizAtual = 0;    
+let quizAtual = 0;
 let quizAcertos = 0;
 
 function atualizarPontos() {
@@ -271,5 +316,3 @@ quizReiniciar.addEventListener("click", () => {
   quizAcertos = 0;
   mostrarPergunta();
 });
-
-mostrarPergunta();
